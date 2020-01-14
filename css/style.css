@@ -731,6 +731,7 @@ background-position:-167px -36px;
 }
 .product-img img {
 	width: 100%;
+	min-height: 168.34px;
 	padding:1em 2.5em 0; 
 }
 .product-info-cust {

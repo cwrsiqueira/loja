@@ -8,23 +8,29 @@
 		 </ol>
 			<h2>Nossos Produtos</h2>			
 		 <div class="col-md-9 product-model-sec">
+
+		 		<?php foreach($list as $prod): ?>
 					 <a href="single.html"><div class="product-grid">
 						<div class="more-product"><span> </span></div>						
 						<div class="product-img b-link-stripe b-animate-go  thickbox">
-							<img src="images/p1.jpg" class="img-responsive" alt="">
+							<?php if(!empty($prod['images'])): ?>
+								<img src="<?php echo BASE_URL; ?>media/products/<?php echo $prod['images'][0]['url']; ?>" class="img-responsive" alt="">
+							<?php else: ?>
+								<img src="<?php BASE_URL; ?>assets/images/logo.png" class="img-responsive" alt="">
+							<?php endif; ?>
 							<div class="b-wrapper">
 							<h4 class="b-animate b-from-left  b-delay03">							
-							<button><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View</button>
+							<button><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Detalhes</button>
 							</h4>
 							</div>
 						</div></a>						
 						<div class="product-info simpleCart_shelfItem">
 							<div class="product-info-cust prt_name">
-								<h4>Lights #1</h4>								
-								<span class="item_price">$187.95</span>
+								<h4><?php echo $prod['name']; ?></h4>								
+								<span class="item_price">R$ <?php echo number_format($prod['price'], 2, ',', '.'); ?></span>
 								<div class="ofr">
-								  <p class="pric1"><del>Rs 280</del></p>
-						          <p class="disc">[12% Off]</p>
+								  <p class="pric1"><del>R$ <?php echo number_format($prod['price_from'], 2, ',', '.'); ?></del></p>
+						          <p class="disc">[<?php echo number_format((($prod['price'] / $prod['price_from']) * 100),0); ?>% de Desconto]</p>
 								</div>
 								<input type="text" class="item_quantity" value="1" />
 								<input type="button" class="item_add items" value="ADD">
@@ -32,276 +38,9 @@
 							</div>												
 							
 						</div>
-					</div>	
-					
-					 <a href="single.html"><div class="product-grid">
-						<div class="more-product"><span> </span></div>						
-						<div class="product-img b-link-stripe b-animate-go  thickbox">
-							<img src="images/p2.jpg" class="img-responsive" alt=""/>
-							<div class="b-wrapper">
-							<h4 class="b-animate b-from-left  b-delay03">							
-							<button><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View</button>
-							</h4>
-							</div>
-						</div></a>					
-						<div class="product-info simpleCart_shelfItem">
-							<div class="product-info-cust prt_name">
-								<h4>Lights #1</h4>								
-								<span class="item_price">$187.95</span>	
-								<div class="ofr">
-								  <p class="pric1"><del>Rs 280</del></p>
-						          <p class="disc">[12% Off]</p>
-								</div>
-								<input type="text" class="item_quantity" value="1" />
-								<input type="button" class="item_add items" value="ADD">
-								<div class="clearfix"> </div>
-							</div>						
-						</div>
 					</div>
-					
-					<a href="single.html"><div class="product-grid">
-						<div class="more-product"><span> </span></div>						
-						<div class="product-img b-link-stripe b-animate-go  thickbox">
-							<img src="images/p3.jpg" class="img-responsive" alt=""/>
-							<div class="b-wrapper">
-							<h4 class="b-animate b-from-left  b-delay03">							
-							<button><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View</button>
-							</h4>
-							</div>
-						</div>	</a>					
-						<div class="product-info simpleCart_shelfItem">
-							<div class="product-info-cust prt_name">
-								<h4>Lights #1</h4>								
-								<span class="item_price">$187.95</span>	
-								<div class="ofr">
-								  <p class="pric1"><del>Rs 280</del></p>
-						          <p class="disc">[12% Off]</p>
-								</div>
-								<input type="text" class="item_quantity" value="1" />
-								<input type="button" class="item_add items" value="ADD">
-								<div class="clearfix"> </div>
-							</div>						
-						</div>
-					</div>
-					
-					<a href="single.html"><div class="product-grid">
-						<div class="more-product"><span> </span></div>						
-						<div class="product-img b-link-stripe b-animate-go  thickbox">
-							<img src="images/p4.jpg" class="img-responsive" alt=""/>
-							<div class="b-wrapper">
-							<h4 class="b-animate b-from-left  b-delay03">							
-							<button><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View</button>
-							</h4>
-							</div>
-						</div></a>						
-						<div class="product-info simpleCart_shelfItem">
-							<div class="product-info-cust prt_name">
-								<h4>Lights #1</h4>								
-								<span class="item_price">$187.95</span>	
-								<div class="ofr">
-								  <p class="pric1"><del>Rs 280</del></p>
-						          <p class="disc">[12% Off]</p>
-								</div>
-								<input type="text" class="item_quantity" value="1" />
-								<input type="button" class="item_add items" value="ADD">
-								<div class="clearfix"> </div>
-							</div>						
-						</div>
-					</div>
-					
-					<a href="single.html"><div class="product-grid">
-						<div class="more-product"><span> </span></div>						
-						<div class="product-img b-link-stripe b-animate-go  thickbox">
-							<img src="images/p5.jpg" class="img-responsive" alt=""/>
-							<div class="b-wrapper">
-							<h4 class="b-animate b-from-left  b-delay03">							
-							<button><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View</button>
-							</h4>
-							</div>
-						</div></a>						
-						<div class="product-info simpleCart_shelfItem">
-							<div class="product-info-cust prt_name">
-								<h4>Lights #1</h4>								
-								<span class="item_price">$187.95</span>	
-								<div class="ofr">
-								  <p class="pric1"><del>Rs 280</del></p>
-						          <p class="disc">[12% Off]</p>
-								</div>
-								<input type="text" class="item_quantity" value="1" />
-								<input type="button" class="item_add items" value="ADD">
-								<div class="clearfix"> </div>
-							</div>						
-						</div>
-					</div>
-					
-					<a href="single.html"><div class="product-grid">
-						<div class="more-product"><span> </span></div>						
-						<div class="product-img b-link-stripe b-animate-go  thickbox">
-							<img src="images/p6.jpg" class="img-responsive" alt=""/>
-							<div class="b-wrapper">
-							<h4 class="b-animate b-from-left  b-delay03">							
-							<button><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View</button>
-							</h4>
-							</div>
-						</div></a>						
-						<div class="product-info simpleCart_shelfItem">
-							<div class="product-info-cust prt_name">
-								<h4>Lights #1</h4>								
-								<span class="item_price">$187.95</span>	
-								<div class="ofr">
-								  <p class="pric1"><del>Rs 280</del></p>
-						          <p class="disc">[12% Off]</p>
-								</div>
-								<input type="text" class="item_quantity" value="1" />
-								<input type="button" class="item_add items" value="ADD">
-								<div class="clearfix"> </div>
-							</div>						
-						</div>
-					</div>
-					<a href="single.html"><div class="product-grid">
-						<div class="more-product"><span> </span></div>						
-						<div class="product-img b-link-stripe b-animate-go  thickbox">
-							<img src="images/p7.jpg" class="img-responsive" alt=""/>
-							<div class="b-wrapper">
-							<h4 class="b-animate b-from-left  b-delay03">							
-							<button><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View</button>
-							</h4>
-							</div>
-						</div></a>						
-						<div class="product-info simpleCart_shelfItem">
-							<div class="product-info-cust prt_name">
-								<h4>Lights #1</h4>								
-								<span class="item_price">$187.95</span>	
-								<div class="ofr">
-								  <p class="pric1"><del>Rs 280</del></p>
-						          <p class="disc">[12% Off]</p>
-								</div>
-								<input type="text" class="item_quantity" value="1" />
-								<input type="button" class="item_add items" value="ADD">
-								<div class="clearfix"> </div>
-							</div>						
-						</div>
-					</div>
-					<a href="single.html"><div class="product-grid">
-						<div class="more-product"><span> </span></div>						
-						<div class="product-img b-link-stripe b-animate-go  thickbox">
-							<img src="images/p8.jpg" class="img-responsive" alt=""/>
-							<div class="b-wrapper">
-							<h4 class="b-animate b-from-left  b-delay03">							
-							<button><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View</button>
-							</h4>
-							</div>
-						</div></a>						
-						<div class="product-info simpleCart_shelfItem">
-							<div class="product-info-cust prt_name">
-								<h4>Lights #1</h4>								
-								<span class="item_price">$187.95</span>	
-								<div class="ofr">
-								  <p class="pric1"><del>Rs 280</del></p>
-						          <p class="disc">[12% Off]</p>
-								</div>
-								<input type="text" class="item_quantity" value="1" />
-								<input type="button" class="item_add items" value="ADD">
-								<div class="clearfix"> </div>
-							</div>						
-						</div>
-					</div>
-					<a href="single.html"><div class="product-grid">
-						<div class="more-product"><span> </span></div>						
-						<div class="product-img b-link-stripe b-animate-go  thickbox">
-							<img src="images/p9.jpg" class="img-responsive" alt=""/>
-							<div class="b-wrapper">
-							<h4 class="b-animate b-from-left  b-delay03">							
-							<button><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View</button>
-							</h4>
-							</div>
-						</div></a>						
-						<div class="product-info simpleCart_shelfItem">
-							<div class="product-info-cust prt_name">
-								<h4>Lights #1</h4>								
-								<span class="item_price">$187.95</span>	
-								<div class="ofr">
-								  <p class="pric1"><del>Rs 280</del></p>
-						          <p class="disc">[12% Off]</p>
-								</div>
-								<input type="text" class="item_quantity" value="1" />
-								<input type="button" class="item_add items" value="ADD">
-								<div class="clearfix"> </div>
-							</div>						
-						</div>
-					</div>
-					<a href="single.html"><div class="product-grid">
-						<div class="more-product"><span> </span></div>						
-						<div class="product-img b-link-stripe b-animate-go  thickbox">
-							<img src="images/p10.jpg" class="img-responsive" alt=""/>
-							<div class="b-wrapper">
-							<h4 class="b-animate b-from-left  b-delay03">							
-							<button><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View</button>
-							</h4>
-							</div>
-						</div></a>						
-						<div class="product-info simpleCart_shelfItem">
-							<div class="product-info-cust prt_name">
-								<h4>Lights #1</h4>								
-								<span class="item_price">$187.95</span>	
-								<div class="ofr">
-								  <p class="pric1"><del>Rs 280</del></p>
-						          <p class="disc">[12% Off]</p>
-								</div>
-								<input type="text" class="item_quantity" value="1" />
-								<input type="button" class="item_add items" value="ADD">
-								<div class="clearfix"> </div>
-							</div>						
-						</div>
-					</div>
-					<a href="single.html"><div class="product-grid">
-						<div class="more-product"><span> </span></div>						
-						<div class="product-img b-link-stripe b-animate-go  thickbox">
-							<img src="images/p11.jpg" class="img-responsive" alt=""/>
-							<div class="b-wrapper">
-							<h4 class="b-animate b-from-left  b-delay03">							
-							<button><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View</button>
-							</h4>
-							</div>
-						</div></a>						
-						<div class="product-info simpleCart_shelfItem">
-							<div class="product-info-cust prt_name">
-								<h4>Lights #1</h4>								
-								<span class="item_price">$187.95</span>	
-								<div class="ofr">
-								  <p class="pric1"><del>Rs 280</del></p>
-						          <p class="disc">[12% Off]</p>
-								</div>
-								<input type="text" class="item_quantity" value="1" />
-								<input type="button" class="item_add items" value="ADD">
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-					</div>
-					<a href="single.html"><div class="product-grid">
-						<div class="more-product"><span> </span></div>						
-						<div class="product-img b-link-stripe b-animate-go  thickbox">
-							<img src="images/p12.jpg" class="img-responsive" alt=""/>
-							<div class="b-wrapper">
-							<h4 class="b-animate b-from-left  b-delay03">							
-							<button><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View</button>
-							</h4>
-							</div>
-						</div></a>						
-						<div class="product-info simpleCart_shelfItem">
-							<div class="product-info-cust prt_name">
-								<h4>Lights #1</h4>								
-								<span class="item_price">$187.95</span>	
-								<div class="ofr">
-								  <p class="pric1"><del>Rs 280</del></p>
-						          <p class="disc">[12% Off]</p>
-								</div>
-								<input type="text" class="item_quantity" value="1" />
-								<input type="button" class="item_add items" value="ADD">
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-					</div>
+				<?php endforeach; ?>
+
 			</div>
 			<div class="rsidebar span_1_of_left">
 				 <section  class="sky-form">
@@ -494,72 +233,5 @@
 	      </div>
 		</div>
 </div>
-<!---->
-<div class="subscribe">
-	 <div class="container">
-		 <h3>Newsletter</h3>
-		 <form>
-			 <input type="text" class="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
-			 <input type="submit" value="Subscribe">
-		 </form>
-	 </div>
-</div>
-<!---->
-<div class="footer">
-	 <div class="container">
-		 <div class="footer-grids">
-			 <div class="col-md-3 about-us">
-				 <h3>About Us</h3>
-				 <p>Maecenas nec auctor sem. Vivamus porttitor tincidunt elementum nisi a, euismod rhoncus urna. Curabitur scelerisque vulputate arcu eu pulvinar. Fusce vel neque diam</p>
-			 </div>
-			 <div class="col-md-3 ftr-grid">
-					<h3>Information</h3>
-					<ul class="nav-bottom">
-						<li><a href="#">Track Order</a></li>
-						<li><a href="#">New Products</a></li>
-						<li><a href="#">Location</a></li>
-						<li><a href="#">Our Stores</a></li>
-						<li><a href="#">Best Sellers</a></li>	
-					</ul>					
-			 </div>
-			 <div class="col-md-3 ftr-grid">
-					<h3>More Info</h3>
-					<ul class="nav-bottom">
-						<li><a href="login.html">Login</a></li>
-						<li><a href="#">FAQ</a></li>
-						<li><a href="contact.html">Contact</a></li>
-						<li><a href="#">Shipping</a></li>
-						<li><a href="#">Membership</a></li>	
-					</ul>					
-			 </div>
-			 <div class="col-md-3 ftr-grid">
-					<h3>Categories</h3>
-					<ul class="nav-bottom">
-						<li><a href="#">Car Lights</a></li>
-						<li><a href="#">LED Lights</a></li>
-						<li><a href="#">Decorates</a></li>
-						<li><a href="#">Wall Lights</a></li>
-						<li><a href="#">Protectors</a></li>	
-					</ul>					
-			 </div>
-			 <div class="clearfix"></div>
-		 </div>
-	 </div>
-</div>
-<div class="copywrite">
-	 <div class="container">
-		 <div class="copy">
-			 <p>© 2015 Lighting. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
-		 </div>
-		 <div class="social">							
-				<a href="#"><i class="facebook"></i></a>
-				<a href="#"><i class="twitter"></i></a>
-				<a href="#"><i class="dribble"></i></a>	
-				<a href="#"><i class="google"></i></a>	
-				<a href="#"><i class="youtube"></i></a>	
-		 </div>
-		 <div class="clearfix"></div>
-	 </div>
-</div>
-<!---->
+<br><br>
 </body>
