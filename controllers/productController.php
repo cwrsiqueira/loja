@@ -8,7 +8,10 @@ class productController extends controller {
     }
 
     public function index() {
-        
+        $store = new Store();
+        $dados = $store->getTemplateData();
+
+        $this->loadTemplate('product', $dados);
     }
 
     public function open($id) {

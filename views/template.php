@@ -26,10 +26,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script type="text/javascript" src="js/memenu.js"></script>
 <script>$(document).ready(function(){$(".memenu").memenu();});</script>	
 <!-- /start menu -->
+<!-- the jScrollPane script -->
+<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+		<script type="text/javascript" id="sourcecode">
+			$(function()
+			{
+				$('.scroll-pane').jScrollPane();
+			});
+		</script>
+<!-- //the jScrollPane script -->
 </head>
 <body> 
 <!--header-->	
 <script src="js/responsiveslides.min.js"></script>
+<script src="js/bootstrap.js"> </script>
 <script>  
     $(function () {
       $("#slider").responsiveSlides({
@@ -51,7 +61,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			 
 			 <div class="top-nav">
 				<ul class="memenu skyblue"><li class="active"><a href="<?php echo BASE_URL; ?>home">Home</a></li>
-					<li class="grid"><a href="#">Produtos</a>
+					<li class="grid"><a href="<?php echo BASE_URL; ?>product">Produtos</a>
 						<div class="mepanel">
 							<div class="row">
 								<?php foreach($viewData['categories'] as $cat): ?>
@@ -90,38 +100,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			 </div>
 			<div class="clearfix"> </div>
 </div>
-<!---->	
-<div class="slider">
-	  <div class="callbacks_container">
-	     <ul class="rslides" id="slider">
-	         <li>
-				 <div class="banner1">				  
-					  <div class="banner-info">
-					  <h3>Morbi lacus hendrerit efficitur.</h3>
-					  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit. consectetur adipiscing elit.</p>
-					  </div>
-				 </div>
-	         </li>
-	         <li>
-				 <div class="banner2">
-					 <div class="banner-info">
-					 <h3>Phasellus elementum tincidunt.</h3>
-					 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit. consectetur adipiscing elit.</p>
-					 </div>
-				 </div>
-			 </li>
-	         <li>
-	             <div class="banner3">
-	        	 <div class="banner-info">
-	        	 <h3>Maecenas interposuere volutpat.</h3>
-	          	 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit. consectetur adipiscing elit.</p>
-				 </div>
-				 </div>
-	         </li>
-	      </ul>
-	  </div>
-  </div>
-<!---->
 
 <?php $this->loadViewInTemplate($viewName, $viewData); ?>
 
