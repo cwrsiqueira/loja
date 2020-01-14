@@ -15,7 +15,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script src="js/jquery.min.js"></script>
 
 <!--//theme style-->
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" >
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="telhas, telha, tijolos, tijolo, construção, construcao, material de construcao, ceramica, ceramicos" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -48,11 +48,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<h1><a href="<?php echo BASE_URL; ?>home"><img style="height: 97px; width: auto;" src="images/logo.png" /></a></h1>
 				</div>
 			 <!---->
-<!--
-			<pre>
-			<?php // print_r($viewData['list']);exit; ?>
-			</pre>
--->
+			 
 			 <div class="top-nav">
 				<ul class="memenu skyblue"><li class="active"><a href="<?php echo BASE_URL; ?>home">Home</a></li>
 					<li class="grid"><a href="#">Produtos</a>
