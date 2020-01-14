@@ -1,0 +1,185 @@
+<!--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Amapá Telhas | Loja</title>
+<link href="<?php echo BASE_URL; ?>css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- Custom Theme files -->
+<!--theme style-->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<script src="js/jquery.min.js"></script>
+
+<!--//theme style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="telhas, telha, tijolos, tijolo, construção, construcao, material de construcao, ceramica, ceramicos" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- start menu -->
+<script src="js/simpleCart.min.js"> </script>
+<!-- start menu -->
+<link href="css/memenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/memenu.js"></script>
+<script>$(document).ready(function(){$(".memenu").memenu();});</script>	
+<!-- /start menu -->
+</head>
+<body> 
+<!--header-->	
+<script src="js/responsiveslides.min.js"></script>
+<script>  
+    $(function () {
+      $("#slider").responsiveSlides({
+      	auto: true,
+      	nav: true,
+      	speed: 500,
+        namespace: "callbacks",
+        pager: false,
+      });
+    });
+  </script>
+  
+<div class="header-top">
+	 <div class="header-bottom">			
+				<div class="logo">
+					<h1><a href="<?php echo BASE_URL; ?>home"><img style="height: 97px; width: auto;" src="images/logo.png" /></a></h1>
+				</div>
+			 <!---->
+<!--
+			<pre>
+			<?php // print_r($viewData['list']);exit; ?>
+			</pre>
+-->
+			 <div class="top-nav">
+				<ul class="memenu skyblue"><li class="active"><a href="<?php echo BASE_URL; ?>home">Home</a></li>
+					<li class="grid"><a href="#">Produtos</a>
+						<div class="mepanel">
+							<div class="row">
+								<?php foreach($viewData['categories'] as $cat): ?>
+									<div class="col1 me-one">
+										<h4><?php echo $cat['name']; ?></h4>
+										<ul>
+											<?php foreach($viewData['allProducts'] as $prod): ?>
+												<?php if($prod['category_name'] == $cat['name']): ?>
+													<li><a href="product.html"><?php echo $prod['name']; ?></a></li>
+												<?php endif; ?>
+
+											<?php endforeach; ?>
+										</ul>
+									</div>
+								<?php endforeach; ?>
+							</div>
+						</div>
+					</li>
+					
+					<li class="grid"><a href="contact.html">Contato</a></li>					
+
+				</ul>				
+			 </div>
+			 <!---->
+			 <div class="cart box_1">
+				 <a href="checkout.html">
+					<div class="total">
+					<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span>)</div>
+					<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+				</a>
+				<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+			 	<div class="clearfix"> </div>
+			 </div>
+			 <div class="clearfix"> </div>
+			 <!---->			 
+			 </div>
+			<div class="clearfix"> </div>
+</div>
+<!---->	
+<div class="slider">
+	  <div class="callbacks_container">
+	     <ul class="rslides" id="slider">
+	         <li>
+				 <div class="banner1">				  
+					  <div class="banner-info">
+					  <h3>Morbi lacus hendrerit efficitur.</h3>
+					  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit. consectetur adipiscing elit.</p>
+					  </div>
+				 </div>
+	         </li>
+	         <li>
+				 <div class="banner2">
+					 <div class="banner-info">
+					 <h3>Phasellus elementum tincidunt.</h3>
+					 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit. consectetur adipiscing elit.</p>
+					 </div>
+				 </div>
+			 </li>
+	         <li>
+	             <div class="banner3">
+	        	 <div class="banner-info">
+	        	 <h3>Maecenas interposuere volutpat.</h3>
+	          	 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit. consectetur adipiscing elit.</p>
+				 </div>
+				 </div>
+	         </li>
+	      </ul>
+	  </div>
+  </div>
+<!---->
+
+<?php $this->loadViewInTemplate($viewName, $viewData); ?>
+
+<!---->
+<div class="subscribe">
+	 <div class="container">
+		 <h3>Promoções e Novidades</h3>
+		 <form>
+			 <input type="text" class="text" value="Digite seu Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Digite seu Email';}">
+			 <input type="submit" value="Receber">
+		 </form>
+	 </div>
+</div>
+<!---->
+<div class="footer">
+	 <div class="container">
+		 <div class="footer-grids">
+			 <div class="col-md-3 about-us">
+				 <h3>Sobre nós</h3>
+				 <p>Maecenas nec auctor sem. Vivamus porttitor tincidunt elementum nisi a, euismod rhoncus urna. Curabitur scelerisque vulputate arcu eu pulvinar. Fusce vel neque diam</p>
+			 </div>
+			 <div class="col-md-3 ftr-grid">
+					<h3>Mais Informações</h3>
+					<ul class="nav-bottom">
+						<li><a href="https://wa.me/+5596991480048" target="_blank"><img width="40px" src="<?php  echo BASE_URL; ?>/images/whatsapp.png"><br><br>Fale conosco no<br>Whatsapp</a></li>
+					</ul>					
+			 </div>
+			 <div class="col-md-3 ftr-grid">
+					<h3>Categorias</h3>
+					<ul class="nav-bottom">
+						<?php foreach($viewData['categories'] as $cat): ?>
+							<li><a href="#"><?php echo $cat['name']; ?></a></li>
+						<?php endforeach; ?>
+					</ul>					
+			 </div>
+			 <div class="clearfix"></div>
+		 </div>
+	 </div>
+</div>
+<div class="copywrite">
+	 <div class="container">
+		 <div class="copy">
+			 <p>© <?php echo date('Y'); ?> Amapá Telhas. Todos os direitos reservados | Design by  <a href="http://www.cwrsdevelopment.com/" target="_blank">CWRS Development</a> </p>
+		 </div>
+		 <div class="social">							
+				<a href="#"><i class="facebook"></i></a>
+				<a href="#"><i class="twitter"></i></a>
+				<a href="#"><i class="dribble"></i></a>	
+				<a href="#"><i class="google"></i></a>	
+				<a href="#"><i class="youtube"></i></a>	
+		 </div>
+		 <div class="clearfix"></div>
+	 </div>
+</div>
+<!---->
+</body>
+</html>
