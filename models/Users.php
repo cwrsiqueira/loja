@@ -40,4 +40,16 @@ class Users extends model {
 
 		return $this->db->lastInsertId();
 	}
+
+	public function userContact($name, $email, $phone, $msg) {
+
+		$sql = $this->db->prepare("INSERT INTO user_contacts SET name = :name, email = :email, phone = :phone, msg = :msg");
+		$sql->bindValue(':email', $email);
+		$sql->bindValue(':phone', $phone);
+		$sql->bindValue(':name', $name);
+		$sql->bindValue(':msg', $msg);
+		$sql->execute();
+
+		return true;
+	}
 }

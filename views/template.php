@@ -83,7 +83,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</div>
 					</li>
 					
-					<li class="grid"><a href="contact.html">Contato</a></li>					
+					<li class="grid"><a href="<?php echo BASE_URL; ?>contact">Contato</a></li>					
 
 				</ul>				
 			 </div>
