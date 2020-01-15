@@ -11,8 +11,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link href="<?php echo BASE_URL; ?>css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- Custom Theme files -->
 <!--theme style-->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
-<script src="js/jquery.min.js"></script>
+<link href="<?php echo BASE_URL; ?>css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<script src="<?php echo BASE_URL; ?>js/jquery.min.js"></script>
 
 <!--//theme style-->
 <meta name="viewport" content="width=device-width, initial-scale=1" >
@@ -20,14 +20,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta name="keywords" content="telhas, telha, tijolos, tijolo, construção, construcao, material de construcao, ceramica, ceramicos" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- start menu -->
-<script src="js/simpleCart.min.js"> </script>
+<script src="<?php echo BASE_URL; ?>js/simpleCart.min.js"> </script>
 <!-- start menu -->
-<link href="css/memenu.css" rel="stylesheet" type="text/css" media="all" />
-<script type="text/javascript" src="js/memenu.js"></script>
+<link href="<?php echo BASE_URL; ?>css/memenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="<?php echo BASE_URL; ?>js/memenu.js"></script>
 <script>$(document).ready(function(){$(".memenu").memenu();});</script>	
 <!-- /start menu -->
+<link href="<?php echo BASE_URL; ?>css/form.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="<?php echo BASE_URL; ?>css/flexslider.css" type="text/css" media="screen" />
 <!-- the jScrollPane script -->
-<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+<script type="text/javascript" src="<?php echo BASE_URL; ?>js/jquery.jscrollpane.min.js"></script>
 		<script type="text/javascript" id="sourcecode">
 			$(function()
 			{
@@ -38,8 +40,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 <body> 
 <!--header-->	
-<script src="js/responsiveslides.min.js"></script>
-<script src="js/bootstrap.js"> </script>
+<script src="<?php echo BASE_URL; ?>js/responsiveslides.min.js"></script>
+<script src="<?php echo BASE_URL; ?>js/bootstrap.js"> </script>
 <script>  
     $(function () {
       $("#slider").responsiveSlides({
@@ -55,7 +57,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="header-top">
 	 <div class="header-bottom">			
 				<div class="logo">
-					<h1><a href="<?php echo BASE_URL; ?>home"><img style="height: 97px; width: auto;" src="images/logo.png" /></a></h1>
+					<h1><a href="<?php echo BASE_URL; ?>home"><img style="height: 97px; width: auto;" src="<?php echo BASE_URL; ?>images/logo.png" /></a></h1>
 				</div>
 			 <!---->
 			 
@@ -124,7 +126,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			 <div class="col-md-3 ftr-grid">
 					<h3>Mais Informações</h3>
 					<ul class="nav-bottom">
-						<li><a href="https://wa.me/+5596991480048" target="_blank"><img width="40px" src="<?php  echo BASE_URL; ?>/images/whatsapp.png"><br><br>Fale conosco no<br>Whatsapp</a></li>
+						<li><a href="https://wa.me/+5596991480048" target="_blank"><img src="<?php  echo BASE_URL; ?>images/whatsapp.png"><br>Fale conosco no<br>Whatsapp</a></li>
 					</ul>					
 			 </div>
 			 <div class="col-md-3 ftr-grid">
@@ -155,5 +157,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	 </div>
 </div>
 <!---->
+Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
 </body>
 </html>

@@ -40,8 +40,8 @@
 				 <a href="product.html"><img src="<?php echo BASE_URL; ?>media/Products/<?php echo (!empty($prod['images']))?$prod['images'][0]['url']:''; ?>" alt=""/>	
 					 <div class="arrival-info">
 						 <h4><?php echo $prod['name']; ?></h4>
-						 <p>R$ <?php echo number_format($prod['price'], 2, ',', '.'); ?></p>
-						 <span class="pric1"><del>R$ <?php echo number_format($prod['price_from'], 2, ',', '.'); ?></del></span>
+						 <p>R$ <?php echo number_format($prod['price'], 2, '.', ','); ?></p>
+						 <span class="pric1"><del>R$ <?php echo number_format($prod['price_from'], 2, '.', ','); ?></del></span>
 						 <span class="disc">[<?php echo number_format((($prod['price'] / $prod['price_from']) * 100),0); ?>% de Desconto]</span>
 					 </div>
 					 <div class="viw">

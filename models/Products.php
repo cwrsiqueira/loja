@@ -399,6 +399,37 @@ class Products extends model {
 		return $array;
 	}
 
+	public function getRelatedProducts($id_category) {
+		$array = array();
+
+		$sql = $this->db->prepare("SELECT *, (select count(*) from products_images where id_product = products.id) as quant FROM products WHERE id_category = :id_category ORDER BY RAND() LIMIT 5");
+		$sql->bindValue(':id_category', $id_category);
+		$sql->execute();
+
+		if($sql->rowCount() > 0) {
+			$array = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+			foreach ($array as $key => $item) {
+				$array[$key]['image'] = array();
+
+				for ($i=0; $i < $item['quant']; $i++) { 
+
+					$sql = $this->db->prepare("SELECT url FROM products_images WHERE id_product = :id_product");
+					$sql->bindValue(':id_product', $item['id']);
+					$sql->execute();
+
+					if ($sql->rowCount() > 0) {
+
+						$array[$key]['image'][$i] = $sql->fetch();
+
+					}
+				}
+			}
+		}
+
+		return $array;
+	}
+
 	public function getAllProducts() {
 		$array = array();
 

@@ -4,13 +4,13 @@
 	 <div class="container">
 			<ol class="breadcrumb">
 		  <li><a href="<?php echo BASE_URL; ?>">Home</a></li>
-		  <li class="active">Products</li>
+		  <li class="active">Produtos</li>
 		 </ol>
 			<h2>Nossos Produtos</h2>			
 		 <div class="col-md-9 product-model-sec">
 
 		 		<?php foreach($list as $prod): ?>
-					 <a href="single.html"><div class="product-grid">
+					 <a href="<?php echo BASE_URL; ?>product/open/<?php echo $prod['id']; ?>"><div class="product-grid">
 						<div class="more-product"><span> </span></div>						
 						<div class="product-img b-link-stripe b-animate-go  thickbox">
 							<?php if(!empty($prod['images'])): ?>
@@ -27,9 +27,9 @@
 						<div class="product-info simpleCart_shelfItem">
 							<div class="product-info-cust prt_name">
 								<h4><?php echo $prod['name']; ?></h4>								
-								<span class="item_price">R$ <?php echo number_format($prod['price'], 2, ',', '.'); ?></span>
+								<span class="item_price">R$ <?php echo number_format($prod['price'], 2, '.', ','); ?></span>
 								<div class="ofr">
-								  <p class="pric1"><del>R$ <?php echo number_format($prod['price_from'], 2, ',', '.'); ?></del></p>
+								  <p class="pric1"><del>R$ <?php echo number_format($prod['price_from'], 2, '.', ','); ?></del></p>
 						          <p class="disc">[<?php echo number_format((($prod['price'] / $prod['price_from']) * 100),0); ?>% de Desconto]</p>
 								</div>
 								<input type="text" class="item_quantity" value="1" />

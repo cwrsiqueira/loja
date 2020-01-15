@@ -55,11 +55,13 @@ class productController extends controller {
         if (count($info) > 0) {
 
             $dados['product_info'] = $info;
+            $dados['allRelatedProducts'] = $products->getRelatedProducts($dados['product_info']['id_category']);
+            $dados['allProducts'] = $products->getAllProducts();
             $dados['product_images'] = $products->getImagesByProductId($id);
             $dados['product_options'] = $products->getOptionsByProductId($id);
             $dados['product_rates'] = $products->getRates($id, 5);
 
-            $this->loadTemplate('product', $dados);
+            $this->loadTemplate('product_item', $dados);
         } else {
             header("Location: ".BASE_URL);
         }
