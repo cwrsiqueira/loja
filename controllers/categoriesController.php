@@ -28,7 +28,7 @@ class categoriesController extends controller {
 
         $currentPage = 1;
         $offset = 0;
-        $limit = 9;
+        $limit = 8;
 
         if (!empty($_GET['p'])) {
             $currentPage = $_GET['p'];

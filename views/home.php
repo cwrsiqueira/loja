@@ -37,7 +37,7 @@
 		 <div class="items-sec">
 		 	<?php foreach($viewData['list'] as $prod): ?>
 				<div class="col-md-3 feature-grid">
-				 <a href="product.html"><img src="<?php echo BASE_URL; ?>media/Products/<?php echo (!empty($prod['images']))?$prod['images'][0]['url']:''; ?>" alt=""/>	
+				 <a href="<?php echo BASE_URL; ?>product/open/<?php echo $prod['id']; ?>"><img src="<?php echo BASE_URL; ?>media/Products/<?php echo (!empty($prod['images']))?$prod['images'][0]['url']:''; ?>" alt=""/>	
 					 <div class="arrival-info">
 						 <h4><?php echo $prod['name']; ?></h4>
 						 <p>R$ <?php echo number_format($prod['price'], 2, '.', ','); ?></p>
@@ -45,7 +45,7 @@
 						 <span class="disc">[<?php echo number_format((($prod['price'] / $prod['price_from']) * 100),0); ?>% de Desconto]</span>
 					 </div>
 					 <div class="viw">
-						<a href="product.html"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>View</a>
+						<a href="<?php echo BASE_URL; ?>product/open/<?php echo $prod['id']; ?>"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>View</a>
 					 </div>
 				  </a>
 				</div>
@@ -74,13 +74,13 @@
 	 	<?php foreach($bestsellers as $bs): ?>
 	 		<?php if($bs['bestseller'] == 1): ?>
 				<div class="col-md-6 grid-left">
-				 <a href="#"><div class="offer-grid1">
+				 <a href="<?php echo BASE_URL; ?>product/open/<?php echo $bs['id']; ?>"><div class="offer-grid1">
 					 <div class="ofr-pic">
 						 <img src="<?php echo BASE_URL; ?>media/Products/<?php echo (!empty($bs['image']))?$bs['image'][0]['url']:''; ?>" class="img-responsive" alt=""/>
 					 </div>
 					 <div class="ofr-pic-info">
 						 <h4><?php echo $bs['name'] ?></h4>
-						 <span>COM <?php echo number_format((($prod['price'] / $prod['price_from']) * 100),0); ?>% DE DESCONTO</span>
+						 <span>COM <?php echo number_format((($bs['price'] / $bs['price_from']) * 100),0); ?>% DE DESCONTO</span>
 						 <p>COMPRE AGORA</p>
 					 </div>
 					 <div class="clearfix"></div>

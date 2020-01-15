@@ -72,7 +72,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 										<ul>
 											<?php foreach($viewData['allProducts'] as $prod): ?>
 												<?php if($prod['category_name'] == $cat['name']): ?>
-													<li><a href="product.html"><?php echo $prod['name']; ?></a></li>
+													<li><a href="<?php echo BASE_URL; ?>product/open/<?php echo $prod['id']; ?>"><?php echo $prod['name']; ?></a></li>
 												<?php endif; ?>
 
 											<?php endforeach; ?>
@@ -133,7 +133,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<h3>Categorias</h3>
 					<ul class="nav-bottom">
 						<?php foreach($viewData['categories'] as $cat): ?>
-							<li><a href="#"><?php echo $cat['name']; ?></a></li>
+							<li><a href="<?php echo BASE_URL; ?>categories/enter/<?php echo $cat['id']; ?>"><?php echo $cat['name']; ?></a></li>
 						<?php endforeach; ?>
 					</ul>					
 			 </div>
