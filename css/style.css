@@ -147,17 +147,17 @@ h1.b1,h2.b2,h3.b3 {
 }
 /*--- slider-css --*/
 .banner1{
-	background:url(../images/bnr.jpg) no-repeat 0px 0px;
+	background:url(../images/casa.jpg) no-repeat 0px 0px;
 	background-size:cover;
 	min-height:585px;
 }
 .banner2{
-	background:url(../images/bnr2.jpg) no-repeat 0px 0px;
+	background:url(../images/revestimento.jpg) no-repeat 0px 0px;
 	background-size:cover;
 	min-height:585px;
 }
 .banner3{
-	background:url(../images/bnr3.jpg) no-repeat 0px 0px;
+	background:url(../images/telhado.jpg) no-repeat 0px 0px;
 	background-size:cover;
 	min-height:585px;
 }

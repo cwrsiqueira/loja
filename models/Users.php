@@ -52,4 +52,13 @@ class Users extends model {
 
 		return true;
 	}
+
+	public function userNewsletter($email) {
+
+		$sql = $this->db->prepare("INSERT INTO user_newsletter SET email = :email, subscribe_date = NOW()");
+		$sql->bindValue(':email', $email);
+		$sql->execute();
+
+		return true;
+	}
 }

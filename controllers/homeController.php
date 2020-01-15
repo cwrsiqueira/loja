@@ -30,6 +30,16 @@ class homeController extends controller {
 
         $offset = ($currentPage * $limit) - $limit;
 
+        if (!empty($_SESSION['msgSuccess'])) {
+            $dados['msgSuccess'] = $_SESSION['msgSuccess'];
+            unset($_SESSION['msgSuccess']);
+        }
+
+        if (!empty($_SESSION['msgFailure'])) {
+            $dados['msgFailure'] = $_SESSION['msgFailure'];
+            unset($_SESSION['msgFailure']);
+        }
+
         $dados['list'] = $products->getList($offset, $limit,$filters);
         $dados['allProducts'] = $products->getAllProducts();
         $dados['bestsellers'] = $products->getBestsellers();

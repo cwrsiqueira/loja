@@ -54,4 +54,26 @@ class contactController extends controller {
         }
     }
 
+    public function newsletter() {
+        $user = new Users();
+
+        if (isset($_POST['email']) && !empty($_POST['email'])) {
+            $email = addslashes($_POST['email']);
+
+            if ($user->userNewsletter($email)) {
+                $_SESSION['msgSuccess'] = "E-mail cadastrado!";
+                header("Location: ".BASE_URL."home");
+                exit;
+            } else {
+                $_SESSION['msgFailure'] = "Desculpe, e-mail não cadastrado. Tente novamente em alguns minutos. Obrigado!";
+                header("Location: ".BASE_URL."home");
+                exit;
+            }
+
+        } else {
+            header("Location: ".BASE_URL."home");
+            exit;
+        }
+    }
+
 }

@@ -109,8 +109,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="subscribe">
 	 <div class="container">
 		 <h3>Promoções e Novidades</h3>
-		 <form>
-			 <input type="text" class="text" value="Digite seu Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Digite seu Email';}">
+		 <form method="POST" action="<?php echo BASE_URL; ?>contact/newsletter">
+			 <input type="text" name="email" class="text" value="Digite seu Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Digite seu Email';}">
 			 <input type="submit" value="Receber">
 		 </form>
 	 </div>
@@ -147,7 +147,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			 <p>© <?php echo date('Y'); ?> Amapá Telhas. Todos os direitos reservados | Design by  <a href="http://www.cwrsdevelopment.com/" target="_blank">CWRS Development</a> </p>
 		 </div>
 		 <div class="social">							
-				<a href="#"><i class="facebook"></i></a>
+				<a href="https://www.facebook.com/amapatelhas/" target="_blank"><i class="facebook"></i></a>
 				<a href="#"><i class="twitter"></i></a>
 				<a href="#"><i class="dribble"></i></a>	
 				<a href="#"><i class="google"></i></a>	

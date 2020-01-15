@@ -1,4 +1,16 @@
-
+<div class="container">
+	<?php if(!empty($msgSuccess)): ?>
+		<br>
+		<div class="alert alert-success alert-dismissible">
+			<strong>Successo!</strong><?php echo $msgSuccess; ?>
+		</div>
+	<?php elseif(!empty($msgFailure)): ?>
+		<br>
+		<div class="alert alert-danger alert-dismissible">
+	 	<strong>Erro!</strong><?php echo $msgFailure; ?>
+	 </div>
+	<?php endif; ?>
+</div>
 <!---->	
 <div class="slider">
 	  <div class="callbacks_container">
