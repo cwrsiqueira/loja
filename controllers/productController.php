@@ -22,7 +22,7 @@ class productController extends controller {
 
         $currentPage = 1;
         $offset = 0;
-        $limit = 8;
+        $limit = 9;
 
         if (!empty($_GET['p'])) {
             $currentPage = $_GET['p'];

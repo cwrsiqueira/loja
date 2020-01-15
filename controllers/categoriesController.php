@@ -39,6 +39,7 @@ class categoriesController extends controller {
 
         if (!empty($dados['category_name'])) {
             $dados['category_filter'] = $categories->getCategoryTree($id);
+            $dados['allProducts'] = $products->getAllProducts();
             $dados['list'] = $products->getList($offset, $limit, $filters);
             $dados['totalItems'] = $products->getTotal($filters);
             $dados['numberOfPages'] = ceil(($dados['totalItems']/$limit));

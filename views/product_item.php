@@ -1,5 +1,11 @@
-<?php //var_dump($product_info, $product_images);exit; ?>
 <body> 
+	<div class="container">
+		<ol class="breadcrumb">
+			<li><a href="<?php echo BASE_URL; ?>product">Produtos</a></li>
+			<li class="active">Detalhes do Produto</li>
+		</ol>
+	</div>
+
 <!--header//-->
 <div class="product">
 	 <div class="container">				
