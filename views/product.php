@@ -32,11 +32,13 @@
 								  <p class="pric1"><del>R$ <?php echo number_format($prod['price_from'], 2, '.', ','); ?></del></p>
 						          <p class="disc">[<?php echo number_format((($prod['price'] / $prod['price_from']) * 100),0); ?>% de Desconto]</p>
 								</div>
-								<input type="text" class="item_quantity" value="1" />
-								<input type="button" class="item_add items" value="ADD">
+								<form method="POST" action="<?php echo BASE_URL; ?>cart/add">
+									<input type="hidden" name="id_product" value="<?php echo $prod['id']; ?>">
+									<input type="number" name="qt_product" class="item_quantity_cart" value="1"/>
+									<input type="submit" class="item_add_cart items_cart" value="ADD">
+								</form>
 								<div class="clearfix"> </div>
-							</div>												
-							
+							</div>	
 						</div>
 					</div>
 				<?php endforeach; ?>

@@ -40,6 +40,10 @@ class homeController extends controller {
             unset($_SESSION['msgFailure']);
         }
 
+        if (!empty($_SESSION['cart'])) {
+            $dados['cart'] = $_SESSION['cart'];
+        }
+
         $dados['list'] = $products->getList($offset, $limit,$filters);
         $dados['allProducts'] = $products->getAllProducts();
         $dados['bestsellers'] = $products->getBestsellers();

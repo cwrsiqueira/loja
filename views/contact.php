@@ -62,7 +62,7 @@
   				</div>		
   				<h3>Ou por WhatsApp</h3><br>
   				<div style="text-align: center;">
-	  				<a href="https://wa.me/+5596991480048" target="_blank">
+	  				<a href="https://wa.me/5596991480058" target="_blank">
 	  					<img src="<?php echo BASE_URL; ?>images/whatsapp.png">	
 	  				</a>
   				</div><br>

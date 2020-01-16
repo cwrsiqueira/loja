@@ -55,6 +55,8 @@ class cartController extends controller {
 
 
         if (!isset($_SESSION['cart']) || (isset($_SESSION['cart']) && count($_SESSION['cart']) == 0)) {
+            unset($_SESSION['subtotal']);
+            unset($_SESSION['quant']);
             header("Location: ".BASE_URL);
             exit;
         }
@@ -64,6 +66,10 @@ class cartController extends controller {
         $dados['cep'] = $cep;
         $dados['shipping'] = $shipping; 
         $dados['list'] = $cart->getList();
+        $dados['allProducts'] = $products->getAllProducts();
+
+        $_SESSION['subtotal'] = $cart->getSubtotal();
+        $_SESSION['quant'] = $cart->getQuant();
 
         $this->loadTemplate('cart', $dados);
     }
@@ -73,6 +79,10 @@ class cartController extends controller {
         if (isset($_POST['id_product'])) {
             $id = intval($_POST['id_product']);
             $qt = intval($_POST['qt_product']);
+
+            if ($qt <= 0) {
+                $qt = 1;
+            }
 
             if (!isset($_SESSION['cart'])) {
                 $_SESSION['cart'] = array();

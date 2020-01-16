@@ -11,7 +11,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link href="<?php echo BASE_URL; ?>css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- Custom Theme files -->
 <!--theme style-->
-<link href="<?php echo BASE_URL; ?>css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<link href="<?php echo BASE_URL; ?>css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="<?php echo BASE_URL; ?>assets/css/style.css" rel="stylesheet" type="text/css" media="all" />	
 <script src="<?php echo BASE_URL; ?>js/jquery.min.js"></script>
 
 <!--//theme style-->
@@ -88,15 +89,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</ul>				
 			 </div>
 			 <!---->
+
 			 <div class="cart box_1">
-				 <a href="checkout.html">
+				 <a href="<?php echo BASE_URL; ?>cart">
 					<div class="total">
-					<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span>)</div>
+						<span>R$ <?php echo (!empty($_SESSION['subtotal']))?number_format($_SESSION['subtotal'], 2, ',', '.'):'0,00'; ?></span> 
+						(<span><?php echo (!empty($_SESSION['quant']))?$_SESSION['quant']:'0'; ?></span>)
+					</div>
 					<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
 				</a>
-				<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
 			 	<div class="clearfix"> </div>
 			 </div>
+
 			 <div class="clearfix"> </div>
 			 <!---->			 
 			 </div>
@@ -121,12 +125,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		 <div class="footer-grids">
 			 <div class="col-md-3 about-us">
 				 <h3>Sobre nós</h3>
-				 <p>Maecenas nec auctor sem. Vivamus porttitor tincidunt elementum nisi a, euismod rhoncus urna. Curabitur scelerisque vulputate arcu eu pulvinar. Fusce vel neque diam</p>
+				 <p>Amapá Telhas é uma fábrica de soluções em produtos cerâmicos de alta qualidade, com a garantia e segurança de quem possui a experiência de 15 anos no mercado, com a visão tecnológica da era digital. Do alicerce ao telhado, temos soluções em cerâmica para a sua obra. Conheça as nossas alternativas!</p>
 			 </div>
 			 <div class="col-md-3 ftr-grid">
 					<h3>Mais Informações</h3>
 					<ul class="nav-bottom">
-						<li><a href="https://wa.me/+5596991480048" target="_blank"><img src="<?php  echo BASE_URL; ?>images/whatsapp.png"><br>Fale conosco no<br>Whatsapp</a></li>
+						<li><a href="https://wa.me/5596991480058" target="_blank"><img src="<?php  echo BASE_URL; ?>images/whatsapp.png"><br>Fale conosco no<br>Whatsapp</a></li>
 					</ul>					
 			 </div>
 			 <div class="col-md-3 ftr-grid">
@@ -144,7 +148,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="copywrite">
 	 <div class="container">
 		 <div class="copy">
-			 <p>© <?php echo date('Y'); ?> Amapá Telhas. Todos os direitos reservados | Design by  <a href="http://www.cwrsdevelopment.com/" target="_blank">CWRS Development</a> </p>
+			 <p>© <?php echo date('Y'); ?> Amapá Telhas. Todos os direitos reservados | Websystem by  <a href="http://www.cwrsdevelopment.com/" target="_blank">CWRS Development</a> </p>
 		 </div>
 		 <div class="social">							
 				<a href="https://www.facebook.com/amapatelhas/" target="_blank"><i class="facebook"></i></a>

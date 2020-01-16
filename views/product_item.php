@@ -54,7 +54,13 @@
 								 </ul>
 							</div>
 
-							<a href="#" class="add-cart item_add">ADICIONAR NO CARRINHO</a>							
+							<form method="POST" action="<?php echo BASE_URL; ?>cart/add">
+								<input type="hidden" name="id_product" value="<?php echo $product_info['id']; ?>">
+								<input type="number" name="qt_product" class="item_quantity_cart" value="1" style="width: 100px;" />
+								<div class="clearfix"> </div>
+								<input type="submit" class="item_add_cart" value="ADICIONAR NO CARRINHO">
+							</form>
+									
 					 </div>
 				 </div>
 				 <div class="clearfix"> </div>

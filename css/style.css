@@ -93,7 +93,7 @@ h1.b1,h2.b2,h3.b3 {
 }
 .box_1{
   float: right;
-  width: 15%;
+  width: 20%;
   margin-top:2em;
 }
 .box_1 h3{
@@ -2044,7 +2044,7 @@ position: absolute;
 }
 @media (max-width: 800px){
 .top-nav {
-    width: 49%;
+    width: 45%;
 }
 .banner-info {
     width: 75%;
@@ -2168,10 +2168,10 @@ span.item_price {
 }
 @media (max-width: 600px){
 .top-nav {
-    width: 35%;
+    width: 30%;
 }
 .box_1 {
-    width: 19%;
+    width: 25%;
 }
 .form-control {
     width: 78%;
@@ -2191,7 +2191,7 @@ span.item_price {
     width: 36%;
 }
 .box_1 {
-    width: 26%;
+    width: 35%;
     margin-top: 1em;
 }
 .banner-info h3 {
@@ -2382,7 +2382,7 @@ input.item_add.items {
     width: 42%;
 }
 .box_1 {
-    width: 27%;
+    width: 40%;
 }
 .subscribe form input[type="submit"] {
     width: 30%;
@@ -2394,7 +2394,7 @@ input.item_add.items {
     padding: 0.3em 2.66em;
 }
 .box_1 {
-  width: 33%;
+  width: 45%;
   margin: 1em;
 }
 .feature-grid {

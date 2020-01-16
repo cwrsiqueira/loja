@@ -43,6 +43,17 @@ class Cart extends model {
 		return $subtotal;
 	}
 
+	public function getQuant() {
+		$list = $this->getList();
+
+		$quant = 0;
+		foreach ($list as $item) {
+			$quant += (intval($item['qt']));
+		}
+
+		return $quant;
+	}
+
 	public function shippingCalculate($cep_destination) {
 		$array = array(
 			'price' => 0,
