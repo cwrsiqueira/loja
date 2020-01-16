@@ -1,4 +1,4 @@
- .item_quantity_cart {
+.item_quantity_cart {
   margin: 1em 0;
   font-size: 0.85em;
   padding: 5px 10px;
@@ -39,4 +39,20 @@
   -moz-transition: color 0.2s ease-in-out;
   -o-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
+}
+.pay_order {
+  background:#6FC9EB;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  font-weight: 600;
+  text-align: center;
+  margin:3em 0;
+  border: 0;
+  width: 100%;
+}
+.pay_order:hover{
+  background:#125482;
 }

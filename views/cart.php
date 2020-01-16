@@ -13,7 +13,7 @@
 		<div class="col-md-3 cart-total">
 			<a class="continue" href="<?php echo BASE_URL; ?>product">Continue Comprando</a>
 			<div class="price-details">
-				<h3>Preço Detalhado</h3>
+				<h3>Valor da Compra</h3>
 				<span>Total</span>
 				<span class="total1"><?php echo number_format($_SESSION['subtotal'], 2); ?></span>
 				<span>(Macapá e Santana-AP)</span>
@@ -27,7 +27,21 @@
 			</ul> 
 			<div class="clearfix"></div>
 			<div class="clearfix"></div>
-			<a class="order" href="#">Efetuar Pagamento</a>
+			<br>
+			<form method="POST" action="<?php echo BASE_URL; ?>cart/payment_redirect">
+				<div class="pay_method">
+					<label for="pay_method">Método de Pagamento:</label>
+					<select name="pay_method">
+						<option></option>
+						<option value="boleto">Boleto</option>
+						<option value="cartaocredito">Cartão de Crédito</option>
+						<option value="cartaodebito">Cartão de Débito</option>
+						<option value="transferencia">Transferência Bancária</option>
+						<option value="pagtonaobra">Pagamento na Obra</option>
+					</select>
+				</div>
+				<input class="pay_order" type="submit" value="Efetuar Pagamento">
+			</form>
 		</div>
 		<div class="col-md-9 cart-items">
 			<h1>Meu Carrinho de Compras (<?php echo $_SESSION['quant']; ?>)</h1>

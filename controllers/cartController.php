@@ -57,7 +57,7 @@ class cartController extends controller {
         if (!isset($_SESSION['cart']) || (isset($_SESSION['cart']) && count($_SESSION['cart']) == 0)) {
             unset($_SESSION['subtotal']);
             unset($_SESSION['quant']);
-            header("Location: ".BASE_URL);
+            header("Location: ".BASE_URL."product");
             exit;
         }
 
@@ -120,10 +120,10 @@ class cartController extends controller {
 
     public function payment_redirect() {
 
-        if (!empty($_POST['payment_type'])) {
-            $payment_type = $_POST['payment_type'];
+        if (!empty($_POST['pay_method'])) {
+            $pay_method = $_POST['pay_method'];
 
-            header("Location: ".BASE_URL.$payment_type);
+            header("Location: ".BASE_URL.$pay_method);
             exit;
 
         }

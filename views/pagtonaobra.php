@@ -1,7 +1,7 @@
 <div class="container">
 	<ol class="breadcrumb">
 		<li><a href="<?php echo BASE_URL; ?>cart">Carrinho de Compras</a></li>
-		<li class="active">Pagamento por Boleto Bancário</li>
+		<li class="active">Pagamento na Obra</li>
 	</ol>
 </div>
 <div class="container">
