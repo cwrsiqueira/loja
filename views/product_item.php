@@ -17,7 +17,7 @@
 								<?php foreach($product_images as $img): ?>
 									<li data-thumb="<?php echo BASE_URL; ?>media/products/<?php echo $img['url']; ?>">
 										<div class="thumb-image"> 
-											<img src="<?php echo BASE_URL; ?>media/products/<?php echo $img['url']; ?>" data-imagezoom="true" class="img-responsive" alt=""/> 
+											<img style="width: 75%;" src="<?php echo BASE_URL; ?>media/products/<?php echo $img['url']; ?>" data-imagezoom="true" class="img-responsive" alt=""/> 
 										</div>
 									</li>
 								<?php endforeach; ?>
@@ -74,7 +74,7 @@
 					 <a href="<?php echo BASE_URL; ?>product/open/<?php echo $prod['id']; ?>">
 						<img width="100%" src="<?php echo BASE_URL; ?>media/products/<?php echo (!empty($prod['image']))?$prod['image'][0]['url']:''; ?>" alt=""/>
 						<h4><?php echo $prod['name']; ?></h4>
-						<span>R$ <?php echo number_format($prod['price_from'], 2, '.', ','); ?></span></a>
+						<span>R$ <?php echo number_format($prod['price'], 2, '.', ','); ?></span></a>
 					</div>
 				<?php endforeach; ?>
 

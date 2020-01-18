@@ -21,7 +21,7 @@
         eventType = "click touchend MSPointerUp keyup",
         watchedEvent = "",
         watchedEventClearTimer,
-        vertical = slider.vars.direction === "vertical",
+        vertical = slider.vars.direction === "horizontal",
         reverse = slider.vars.reverse,
         carousel = (slider.vars.itemWidth > 0),
         fade = slider.vars.animation === "fade",

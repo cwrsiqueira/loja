@@ -16,7 +16,7 @@
 					 <h4><?php echo $prod['name']; ?></h4>
 					 <p>R$ <?php echo number_format($prod['price'], 2, '.', ','); ?></p>
 					 <span class="pric1"><del>R$ <?php echo number_format($prod['price_from'], 2, '.', ','); ?></del></span>
-					 <span class="disc">[<?php echo number_format((($prod['price'] / $prod['price_from']) * 100),0); ?>% de Desconto]</span>
+					 <span class="disc">[<?php echo number_format(((($prod['price_from'] - $prod['price']) / $prod['price_from']) * 100),0); ?>% de Desconto]</span>
 				 </div>
 				 <div class="viw">
 					<a href="<?php echo BASE_URL; ?>product/open/<?php echo $prod['id']; ?>"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>View</a>

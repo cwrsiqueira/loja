@@ -30,7 +30,7 @@
 								<span class="item_price">R$ <?php echo number_format($prod['price'], 2, '.', ','); ?></span>
 								<div class="ofr">
 								  <p class="pric1"><del>R$ <?php echo number_format($prod['price_from'], 2, '.', ','); ?></del></p>
-						          <p class="disc">[<?php echo number_format((($prod['price'] / $prod['price_from']) * 100),0); ?>% de Desconto]</p>
+						          <p class="disc">[<?php echo number_format(((($prod['price_from'] - $prod['price']) / $prod['price_from']) * 100),0); ?>% de Desconto]</p>
 								</div>
 								<form method="POST" action="<?php echo BASE_URL; ?>cart/add">
 									<input type="hidden" name="id_product" value="<?php echo $prod['id']; ?>">

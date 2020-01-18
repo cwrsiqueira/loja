@@ -123,24 +123,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="footer">
 	 <div class="container">
 		 <div class="footer-grids">
-			 <div class="col-md-3 about-us">
-				 <h3>Sobre nós</h3>
-				 <p>Amapá Telhas é uma fábrica de soluções em produtos cerâmicos de alta qualidade, com a garantia e segurança de quem possui a experiência de 15 anos no mercado, com a visão tecnológica da era digital. Do alicerce ao telhado, temos soluções em cerâmica para a sua obra. Conheça as nossas alternativas!</p>
-			 </div>
-			 <div class="col-md-3 ftr-grid">
-					<h3>Mais Informações</h3>
-					<ul class="nav-bottom">
-						<li><a href="https://wa.me/5596991480058" target="_blank"><img src="<?php  echo BASE_URL; ?>images/whatsapp.png"><br>Fale conosco no<br>Whatsapp</a></li>
-					</ul>					
-			 </div>
-			 <div class="col-md-3 ftr-grid">
-					<h3>Categorias</h3>
-					<ul class="nav-bottom">
-						<?php foreach($viewData['categories'] as $cat): ?>
-							<li><a href="<?php echo BASE_URL; ?>categories/enter/<?php echo $cat['id']; ?>"><?php echo $cat['name']; ?></a></li>
-						<?php endforeach; ?>
-					</ul>					
-			 </div>
+		 	<div class="row">
+				 <div class="col-md-3 about-us">
+					 <h3>Sobre nós</h3>
+					 <p>Amapá Telhas é uma fábrica de soluções em produtos cerâmicos de alta qualidade, com a garantia e segurança de quem possui a experiência de 15 anos no mercado, com a visão tecnológica da era digital. Do alicerce ao telhado, temos soluções em cerâmica para a sua obra. Conheça as nossas alternativas!</p>
+				 </div>
+				 <div class="col-md-3 ftr-grid">
+						<h3>Mais Informações</h3>
+						<ul class="nav-bottom">
+							<li><a href="https://wa.me/5596991480058" target="_blank"><img src="<?php  echo BASE_URL; ?>images/whatsapp.png"><br>Fale conosco no<br>Whatsapp</a></li>
+						</ul>					
+				 </div>
+				 <div class="col-md-3 ftr-grid">
+						<h3>Categorias</h3>
+						<ul class="nav-bottom">
+							<?php foreach($viewData['categories'] as $cat): ?>
+								<li><a href="<?php echo BASE_URL; ?>categories/enter/<?php echo $cat['id']; ?>"><?php echo $cat['name']; ?></a></li>
+							<?php endforeach; ?>
+						</ul>					
+				 </div>
+				</div>
 			 <div class="clearfix"></div>
 		 </div>
 	 </div>

@@ -1932,7 +1932,7 @@ p.para {
 }
 @media (max-width: 1024px){
 .top-nav {
-    width: 58%;
+    width: 54%;
 }
 .banner1, .banner2, .banner3 {
     min-height: 385px;
@@ -2117,6 +2117,7 @@ position: absolute;
 }
 .footer {
     padding: 2em 0 0;
+    padding-left: 10px;
 }
 .ftr-grid {
     width: 50%;
@@ -2185,7 +2186,8 @@ span.item_price {
 @media (max-width: 480px){
 .logo h1 a {
     font-size: 1em;
-    padding: 0.3em 4.85em;
+    padding: 0.3em 0em;
+    width: 480px;
 }
 .top-nav {
     width: 36%;
@@ -2257,7 +2259,7 @@ span.item_price {
     padding: 0;
 }
 .product-grid {
-    width: 46%;
+    width: 100%;
 }
 .form-control {
     width: 79%;
@@ -2344,10 +2346,13 @@ input.item_add.items {
     margin: 12px 0 0 17px;
 }
 }
+@media (max-width: 425px){
+.logo h1 a {
+    width: 425px;
+}
 @media (max-width: 414px){
 .logo h1 a {
-    font-size: 1em;
-    padding: 0.3em 3.9em;
+    width: 414px;
 }
 .item_quantity {
     padding: 6px 6px !important; 
@@ -2375,8 +2380,7 @@ input.item_add.items {
 }
 @media (max-width: 384px){
 .logo h1 a {
-    font-size: 1em;
-    padding: 0.3em 3.4em;
+	width: 384px;
 }
 .top-nav {
     width: 42%;
@@ -2388,10 +2392,13 @@ input.item_add.items {
     width: 30%;
 }
 }
+@media (max-width: 375px){
+.logo h1 a {
+	width: 375px;
+}
 @media (max-width: 320px){
 .logo h1 a {
-    font-size: 1em;
-    padding: 0.3em 2.66em;
+	width: 320px;
 }
 .box_1 {
   width: 45%;
