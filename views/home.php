@@ -49,7 +49,7 @@
 		 <div class="items-sec">
 		 	<?php foreach($viewData['list'] as $prod): ?>
 				<div class="col-md-3 feature-grid">
-				 <a href="<?php echo BASE_URL; ?>product/open/<?php echo $prod['id']; ?>"><img src="<?php echo BASE_URL; ?>media/Products/<?php echo (!empty($prod['images']))?$prod['images'][0]['url']:''; ?>" alt=""/>	
+				 <a href="<?php echo BASE_URL; ?>product/open/<?php echo $prod['id']; ?>"><img src="<?php echo BASE_URL; ?>media/products/<?php echo (!empty($prod['images']))?$prod['images'][0]['url']:''; ?>" alt=""/>	
 					 <div class="arrival-info">
 						 <h4><?php echo $prod['name']; ?></h4>
 						 <p>R$ <?php echo number_format($prod['price'], 2, '.', ','); ?></p>
@@ -88,7 +88,7 @@
 				<div class="col-md-6 grid-left">
 				 <a href="<?php echo BASE_URL; ?>product/open/<?php echo $bs['id']; ?>"><div class="offer-grid1">
 					 <div class="ofr-pic">
-						 <img src="<?php echo BASE_URL; ?>media/Products/<?php echo (!empty($bs['image']))?$bs['image'][0]['url']:''; ?>" class="img-responsive" alt=""/>
+						 <img src="<?php echo BASE_URL; ?>media/products/<?php echo (!empty($bs['image']))?$bs['image'][0]['url']:''; ?>" class="img-responsive" alt=""/>
 					 </div>
 					 <div class="ofr-pic-info">
 						 <h4><?php echo $bs['name'] ?></h4>

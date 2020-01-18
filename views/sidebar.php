@@ -7,13 +7,13 @@
 			 <div class="tab<?php echo $cat['id']; ?>" id="tab">
 				 <ul class="place" onclick="$('.tab<?php echo $cat['id']; ?> .single-bottom').slideToggle(300);">								
 					 <li class="sort"><?php echo $cat['name']; ?></li>
-					 <li class="by"><img src="images/do.png" alt=""></li>
+					 <li class="by"><img src="<?php echo BASE_URL; ?>images/do.png" alt=""></li>
 						<div class="clearfix"> </div>
 				  </ul>
 				 <div class="single-bottom">	
 				 	<?php foreach($allProducts as $prod): ?>
 				 		<?php if($prod['id_category'] == $cat['id']): ?>
-							<a href="<?php BASE_URL; ?>product/open/<?php echo $prod['id']; ?>"><p><?php echo $prod['name']; ?></p></a>
+							<a href="<?php echo BASE_URL; ?>product/open/<?php echo $prod['id']; ?>"><p><?php echo $prod['name']; ?></p></a>
 						<?php endif; ?>
 					<?php endforeach; ?>
 			     </div>
