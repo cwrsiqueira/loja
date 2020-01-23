@@ -31,7 +31,6 @@ class productController extends controller {
         $offset = ($currentPage * $limit) - $limit;
 
         $dados['list'] = $products->getList($offset, $limit, $filters);
-        $dados['allProducts'] = $products->getAllProducts();
         $dados['bestsellers'] = $products->getBestsellers();
         $dados['totalItems'] = $products->getTotal($filters);
         $dados['numberOfPages'] = ceil(($dados['totalItems']/$limit));
@@ -56,7 +55,6 @@ class productController extends controller {
 
             $dados['product_info'] = $info;
             $dados['allRelatedProducts'] = $products->getRelatedProducts($dados['product_info']['id_category']);
-            $dados['allProducts'] = $products->getAllProducts();
             $dados['product_images'] = $products->getImagesByProductId($id);
             $dados['product_options'] = $products->getOptionsByProductId($id);
             $dados['product_rates'] = $products->getRates($id, 5);

@@ -23,7 +23,6 @@ class contactController extends controller {
             unset($_SESSION['msgFailure']);
         }
 
-        $dados['allProducts'] = $products->getAllProducts();
         $dados['company'] = $company->getCompany();
 
         $this->loadTemplate('contact', $dados);

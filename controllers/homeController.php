@@ -45,7 +45,6 @@ class homeController extends controller {
         }
 
         $dados['list'] = $products->getList($offset, $limit,$filters);
-        $dados['allProducts'] = $products->getAllProducts();
         $dados['bestsellers'] = $products->getBestsellers();
         $dados['totalItems'] = $products->getTotal($filters);
         $dados['numberOfPages'] = ceil(($dados['totalItems']/$limit));

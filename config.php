@@ -27,7 +27,7 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $config['default_lang'] = 'pt-br';
 $config['cep_origin'] = 68911085;
 
-// Cielo
+// Cielo SandBox
 $config['MerchantId'] = '2117e9da-0e12-4fc7-b376-c7058510a3ff';
 $config['MerchantKey'] = 'MIZSNTMPYIJDWZZDGYWTWVOORFFAISYGNVMAKFIL';
 

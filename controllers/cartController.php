@@ -66,7 +66,6 @@ class cartController extends controller {
         $dados['cep'] = $cep;
         $dados['shipping'] = $shipping; 
         $dados['list'] = $cart->getList();
-        $dados['allProducts'] = $products->getAllProducts();
 
         $_SESSION['subtotal'] = $cart->getSubtotal();
         $_SESSION['quant'] = $cart->getQuant();

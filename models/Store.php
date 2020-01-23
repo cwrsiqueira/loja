@@ -16,6 +16,7 @@ class Store extends model {
         $dados['widget_sale'] = $products->getList(0, 3, array('sale'=>'1'), true);
         $dados['widget_toprated'] = $products->getList(0, 3, array('toprated'=>'1'));
         $dados['company'] = $company->getCompany();
+        $dados['allProducts'] = $products->getAllProducts();
 
         // CONTAR A QUANTIDADE TOTAL DE ITENS NO CARRINHO
         /*if (isset($_SESSION['cart'])) {
