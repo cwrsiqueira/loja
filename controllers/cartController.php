@@ -92,6 +92,7 @@ class cartController extends controller {
             } else {
                 $_SESSION['cart'][$id] = $qt;
             }
+
         }
 
         header("Location: ".BASE_URL."cart");
