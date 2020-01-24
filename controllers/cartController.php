@@ -75,9 +75,9 @@ class cartController extends controller {
 
     public function add() {
 
-        if (isset($_POST['id_product'])) {
-            $id = intval($_POST['id_product']);
-            $qt = intval($_POST['qt_product']);
+        if (isset($_GET['id_product'])) {
+            $id = intval($_GET['id_product']);
+            $qt = intval($_GET['qt_product']);
 
             if ($qt <= 0) {
                 $qt = 1;

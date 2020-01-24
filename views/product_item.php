@@ -54,7 +54,7 @@
 								 </ul>
 							</div>
 
-							<form method="POST" action="<?php echo BASE_URL; ?>cart/add">
+							<form method="GET" action="<?php echo BASE_URL; ?>cart/add">
 								<input type="hidden" name="id_product" value="<?php echo $product_info['id']; ?>">
 								<input type="number" name="qt_product" class="item_quantity_cart" value="1" style="width: 100px;" />
 								<div class="clearfix"> </div>
