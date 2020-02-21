@@ -6,14 +6,14 @@ global $db;
 
 $config = array();
 if(ENVIRONMENT == 'development') {
-	define("BASE_URL", "http://carlos.pc/loja_virtual_20/");
-	$config['dbname'] = 'pronor28_loja_virtual_20';
+	define("BASE_URL", "http://carlos.pc/loja/");
+	$config['dbname'] = 'pronor28_loja';
 	$config['host'] = 'localhost';
 	$config['dbuser'] = 'root';
 	$config['dbpass'] = '';
 } else {
-	define("BASE_URL", "https://www.cwrsdevelopment.com/loja_virtual_20/");
-	$config['dbname'] = 'pronor28_loja_virtual_20';
+	define("BASE_URL", "https://www.cwrsdevelopment.com/loja/");
+	$config['dbname'] = 'pronor28_loja';
 	$config['host'] = 'localhost';
 	$config['dbuser'] = 'pronor28_carlos';
 	$config['dbpass'] = 'cwrs1909';
@@ -48,8 +48,8 @@ $config['gerencianet_sandbox'] = true;
 $config['pagseguro_seller'] = 'cwrsiqueira@msn.com';
 
 \PagSeguro\Library::initialize();
-\PagSeguro\Library::cmsVersion()->setName("loja_virtual_20")->setRelease("1.0.0");
-\PagSeguro\Library::moduleVersion()->setName("loja_virtual_20")->setRelease("1.0.0");
+\PagSeguro\Library::cmsVersion()->setName("loja")->setRelease("1.0.0");
+\PagSeguro\Library::moduleVersion()->setName("loja")->setRelease("1.0.0");
 
 \PagSeguro\Configuration\Configure::setEnvironment('sandbox');
 \PagSeguro\Configuration\Configure::setAccountCredentials('cwrsiqueira@msn.com', 'BA4C77D506A043E9B943C0B0FFDAAD00');
