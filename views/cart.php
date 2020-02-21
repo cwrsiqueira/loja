@@ -40,7 +40,7 @@
 						<option value="pagtonaobra">Pagamento na Obra</option>
 					</select>
 				</div>
-				<input class="pay_order" type="submit" value="Efetuar Pagamento">
+				<input class="pay_order" type="submit" value="Confirmar Compra">
 			</form>
 		</div>
 		<div class="col-md-9 cart-items">

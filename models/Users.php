@@ -4,7 +4,7 @@ class Users extends model {
 
 	public function emailExists($email) {
 
-		$sql = $this->db->prepare("SELECT * FROM users WHERE email = :email");
+		$sql = $this->db->prepare("SELECT * FROM purchases_client WHERE email = :email");
 		$sql->bindValue(':email', $email);
 		$sql->execute();
 
@@ -15,12 +15,11 @@ class Users extends model {
 		}
 	}
 
-	public function validate($email, $password) {
+	public function validate($email) {
 		$dados = array();
 
-		$sql = $this->db->prepare("SELECT id FROM users WHERE email = :email AND password = :password");
+		$sql = $this->db->prepare("SELECT id FROM users WHERE email = :email");
 		$sql->bindValue(':email', $email);
-		$sql->bindValue(':password', md5($password));
 		$sql->execute();
 
 		if ($sql->rowCount() > 0) {
@@ -30,12 +29,62 @@ class Users extends model {
 		return $dados;
 	}
 
-	public function createUser($name, $email, $password) {
+	public function validateClient($email) {
+		$dados = array();
 
-		$sql = $this->db->prepare("INSERT INTO users SET name = :name, email = :email, password = :password");
+		$sql = $this->db->prepare("SELECT id FROM purchases_client WHERE email = :email");
 		$sql->bindValue(':email', $email);
-		$sql->bindValue(':password', md5($password));
+		$sql->execute();
+
+		if ($sql->rowCount() > 0) {
+			$dados = $sql->fetch()['id'];
+		}
+
+		return $dados;
+	}
+
+	public function createUser($name, $email) {
+
+		$sql = $this->db->prepare("INSERT INTO users SET name = :name, email = :email");
+		$sql->bindValue(':email', $email);
 		$sql->bindValue(':name', $name);
+		$sql->execute();
+
+		return $this->db->lastInsertId();
+	}
+
+	public function createClient($name, $cpf, $phone, $email, $areacode, $street, $number, $complement, $neighborhood, $city, $state) {
+		
+		//var_dump($name, $cpf, $phone, $email, $areacode, $street, $number, $complement, $neighborhood, $city, $state);exit;
+
+		$sql = $this->db->prepare("
+			INSERT INTO 
+				purchases_client 
+			SET 
+				name = :name, 
+				cpf = :cpf, 
+				email = :email, 
+				phone = :phone, 
+				areacode = :areacode, 
+				street = :street, 
+				street_number = :street_number, 
+				complement = :complement, 
+				n_hood = :neighborhood, 
+				city = :city, 
+				state = :state,
+				reg_date = NOW()"
+			);
+		$sql->bindValue(':name', $name);
+		$sql->bindValue(':cpf', $cpf);
+		$sql->bindValue(':email', $email);
+		$sql->bindValue(':phone', $phone);
+		$sql->bindValue(':areacode', $areacode);
+		$sql->bindValue(':street', $street);
+		$sql->bindValue(':street_number', $number);
+		$sql->bindValue(':complement', $complement);
+		$sql->bindValue(':neighborhood', $neighborhood);
+		$sql->bindValue(':city', $city);
+		$sql->bindValue(':state', $state);
 		$sql->execute();
 
 		return $this->db->lastInsertId();

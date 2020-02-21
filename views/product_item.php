@@ -17,7 +17,7 @@
 								<?php foreach($product_images as $img): ?>
 									<li data-thumb="<?php echo BASE_URL; ?>media/products/<?php echo $img['url']; ?>">
 										<div class="thumb-image"> 
-											<img style="width: 75%;" src="<?php echo BASE_URL; ?>media/products/<?php echo $img['url']; ?>" data-imagezoom="true" class="img-responsive" alt=""/> 
+											<img src="<?php echo BASE_URL; ?>media/products/<?php echo $img['url']; ?>" data-imagezoom="true" class="img-responsive" alt=""/> 
 										</div>
 									</li>
 								<?php endforeach; ?>

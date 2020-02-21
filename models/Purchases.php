@@ -4,7 +4,7 @@ class Purchases extends model {
 
 	public function createPurchase($id, $total, $payment_type) {
 
-		$sql = $this->db->prepare("INSERT INTO purchases SET id_user = :id, total_amount = :total, payment_type = :payment_type, payment_status = 1, date_purchase = NOW(), date_status = NOW()");
+		$sql = $this->db->prepare("INSERT INTO purchases SET id_client = :id, total_amount = :total, payment_type = :payment_type, payment_status = 1, date_purchase = NOW(), date_status = NOW()");
 		$sql->bindValue(':id', $id);
 		$sql->bindValue(':total', $total);
 		$sql->bindValue(':payment_type', $payment_type);

@@ -94,7 +94,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				 <a href="<?php echo BASE_URL; ?>cart">
 					<div class="total">
 						<span>R$ <?php echo (!empty($_SESSION['subtotal']))?number_format($_SESSION['subtotal'], 2, ',', '.'):'0,00'; ?></span> 
-						(<span><?php echo (!empty($_SESSION['quant']))?$_SESSION['quant']:'0'; ?></span>)
+						(<span><?php echo (!empty($_SESSION['cart']))?count($_SESSION['cart']):'0'; ?></span>)
 					</div>
 					<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
 				</a>
@@ -164,5 +164,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </div>
 <!---->
 Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+
+<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery.mask.min.js"></script>
+<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/script.js"></script>
 </body>
 </html>
